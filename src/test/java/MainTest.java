@@ -41,9 +41,9 @@ public class MainTest {
         holden = new Holden(4, "Holden");
         ford = new Ford(4, "Ford");
         carSkeleton = new CarSkeleton("Test", "test");
-        electricCar = new ElectricCar("Test", "test", 10, 5);
-        gasPoweredCar = new GasPoweredCar("Test", "test", 10, 4);
-        hybridCar = new HybridCar("Test", "test", 10, 5, 4);
+        electricCar = new ElectricCar(1, 5);
+        gasPoweredCar = new GasPoweredCar(1, 4);
+        hybridCar = new HybridCar(1, 1, 10);
     }
 
     @DisplayName("Car sınıf değişkenleri doğru access modifier değerlerine sahip mi ?")

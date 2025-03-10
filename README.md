@@ -18,10 +18,10 @@ Polymorphism soyut bir kavram olduğu için tam olarak nasıl çalıştığını
 
  ### Pacific Car Company
 
- * Bugün ki projemizde toplamda 4 tane sınıf oluşturman istenmektedir.
- * İlk sınıfımız org.example.company paketi altında ```Car``` isimli sınıfımız olmalı.
- * ```Car``` sınıfı diğer oluşturacağımız 3 sınıf olan ```Mitsubishi```, ```Holden```, ```Ford``` sınıflarının parent sınıf olacak.
-   * ```Car``` sınıfı 4 adet ```instance variable``` içermeli.
+ +++ * Bugün ki projemizde toplamda 4 tane sınıf oluşturman istenmektedir.
+ +++ * İlk sınıfımız org.example.company paketi altında ```Car``` isimli sınıfımız olmalı.
+ +++ * ```Car``` sınıfı diğer oluşturacağımız 3 sınıf olan ```Mitsubishi```, ```Holden```, ```Ford``` sınıflarının parent sınıf olacak.
+   +++ * ```Car``` sınıfı 4 adet ```instance variable``` içermeli.
         
         engine => boolean
    
@@ -31,31 +31,31 @@ Polymorphism soyut bir kavram olduğu için tam olarak nasıl çalıştığını
    
         wheels => int
    
-   * Bu 4 değişkende ```private``` olarak tanımlanmalı
-   * Car sınıfı için tek bir ```constructor``` tanımlanmalı. Constructor sadece 2 değeri dışarıdan almalı cylinders ve name değerlerini. İlgili 3 arabanın da motoru bulunduğu için ve 4 tekeri olduğu için contructor metodu içerisinde bu değerler default olarak set edilmeli. Dışarıdan parametre olarak alınmaya ihtiyaç duyulmamalı.
-   * name ve cylinders parametreleri için getter metodlarını tanımlayınız.
-   * Car sınıfı için toString ve equals methodlarını da ```Override``` etmelisin. Equals metodu için name ve cylinders alanları birlikte eşitliği kontrol etmeli.
-   * Car sınıfı içerisinde aşağıdaki 3 metod tanımlanmalı
-   * ```startEngine()``` hiçbir parametre almayacak ```the car's engine is starting``` mesajını dönmeli.
-   * ```accelerate()```  hiçbir parametre almayacak ```the car is accelerating``` mesajını dönmeli.
-   * ```brake()``` hiçbir parametre almayacak ```the car is braking``` mesajını dönmeli.
-   * Ayrıca bu 3 metodunda içerisinde ```getClass().getSimpleName()``` değeri loglanmalı.
-   * ```Mitsubishi```, ```Holden```, ```Ford``` sınıfları org.example.company paketi altında olmalı ve ```Car``` sınıfının alt sınıflarıdır ve bu 3 metoduda ```Override``` etmeliler.
+   +++ * Bu 4 değişkende ```private``` olarak tanımlanmalı
+   +++ * Car sınıfı için tek bir ```constructor``` tanımlanmalı. Constructor sadece 2 değeri dışarıdan almalı cylinders ve name değerlerini. İlgili 3 arabanın da motoru bulunduğu için ve 4 tekeri olduğu için contructor metodu içerisinde bu değerler default olarak set edilmeli. Dışarıdan parametre olarak alınmaya ihtiyaç duyulmamalı.
+   +++ * name ve cylinders parametreleri için getter metodlarını tanımlayınız.
+   +++ * Car sınıfı için toString ve equals methodlarını da ```Override``` etmelisin. Equals metodu için name ve cylinders alanları birlikte eşitliği kontrol etmeli.
+   +++ * Car sınıfı içerisinde aşağıdaki 3 metod tanımlanmalı
+   +++ * ```startEngine()``` hiçbir parametre almayacak ```the car's engine is starting``` mesajını dönmeli.
+   +++ * ```accelerate()```  hiçbir parametre almayacak ```the car is accelerating``` mesajını dönmeli.
+   +++ * ```brake()``` hiçbir parametre almayacak ```the car is braking``` mesajını dönmeli.
+   +++ * Ayrıca bu 3 metodunda içerisinde ```getClass().getSimpleName()``` değeri loglanmalı.
+   +++ * ```Mitsubishi```, ```Holden```, ```Ford``` sınıfları org.example.company paketi altında olmalı ve ```Car``` sınıfının alt sınıflarıdır ve bu 3 metoduda ```Override``` etmeliler.
 
 Aşağıdaki gibi bir input değeri için output kısmında her araç türünün kendi override edilmiş metodunun çağırıldığından emin olmalısın.
 
  ### Car R&D Company
 
- * 'Car R&D Company' 3 farklı arabalarının dizaynını yapabilmek için yardıma ihtiyaç duyuyorlar. Bu konuda sana güvenleri tam. Problemlerini çözebilmen için seni işe aldılar.
- * org.example.arge paketi altında ```CarSkeleton``` isminde bir sınıf tanımlayınız. ```name ve description``` alanlarını almalı.
- * CarSkeleton sınıfının 2 tane constructor değeri olmalı biri hiç parametre almayan diğeri name ve description değerlerini alan.
- * ```CarSkeleton``` sınıfının 3 adet metodu olmalı. ```startEngine(), drive(), runEngine()``` startEngine ve drive metodları public olarak tanımlanmalı. runEngine protected olarak tanımlanmalı.
- * runEngine metodu drive metodunun içerisinden çağırılmalı.
- * ```CarSkeleton``` sınıfının 3 tane de ```subclass``` değeri tanımlanmalı. ```GasPoweredCar```, ```ElectricCar```, ```HybridCar```
- * ```GasPoweredCar``` iki sınıf değişkeni içerir. ```avgKmPerLitre: double ve cylinders: int``` bu iki değişkeni de set edebileceği bir constructorı olmalıdır.
- * ```ElectricCar``` iki sınıf değişkeni içerir. ```avgKmPerCharge: double ve batterySize: int``` bu iki değişkeni de set edebileceği bir constructorı olmalıdır.
- * ```HybridCar``` üç sınıf değişkeni içerir. ```avgKmPerLitre: double, batterySize: int, cylinders: int``` bu üç değişkeni de set edebileceği bir constructorı olmalıdır.
- * Bu üç farklı sınıfta ```startEngine ve drive``` metodlarını engine(motor) tiplerine göre farklı şekillerde çağırırlar.
+ +++ * 'Car R&D Company' 3 farklı arabalarının dizaynını yapabilmek için yardıma ihtiyaç duyuyorlar. Bu konuda sana güvenleri tam. Problemlerini çözebilmen için seni işe aldılar.
+ +++ * org.example.arge paketi altında ```CarSkeleton``` isminde bir sınıf tanımlayınız. ```name ve description``` alanlarını almalı.
+ +++ * CarSkeleton sınıfının 2 tane constructor değeri olmalı biri hiç parametre almayan diğeri name ve description değerlerini alan.
+ +++ * ```CarSkeleton``` sınıfının 3 adet metodu olmalı. ```startEngine(), drive(), runEngine()``` startEngine ve drive metodları public olarak tanımlanmalı. runEngine protected olarak tanımlanmalı.
+ +++ * runEngine metodu drive metodunun içerisinden çağırılmalı.
+ +++ * ```CarSkeleton``` sınıfının 3 tane de ```subclass``` değeri tanımlanmalı. ```GasPoweredCar```, ```ElectricCar```, ```HybridCar```
+ +++ * ```GasPoweredCar``` iki sınıf değişkeni içerir. ```avgKmPerLitre: double ve cylinders: int``` bu iki değişkeni de set edebileceği bir constructorı olmalıdır.
+ +++ * ```ElectricCar``` iki sınıf değişkeni içerir. ```avgKmPerCharge: double ve batterySize: int``` bu iki değişkeni de set edebileceği bir constructorı olmalıdır.
+ +++ * ```HybridCar``` üç sınıf değişkeni içerir. ```avgKmPerLitre: double, batterySize: int, cylinders: int``` bu üç değişkeni de set edebileceği bir constructorı olmalıdır.
+ +++ * Bu üç farklı sınıfta ```startEngine ve drive``` metodlarını engine(motor) tiplerine göre farklı şekillerde çağırırlar.
  * Tüm dizaynı yapmak senin görevin. Alt sınıflar ```CarSkeleton``` içerisindeki bazı metodları ya da hepsini Override etmeli mi ?
  * Bir adet Main sınıfı tanımlayınız ve tüm sınıfların objelerinden polymorphism kurallarına uyacak şekilde birer instance oluşturunuz.
  * Her instance ile sınıfın davranışını test edin. Bir tane metodunuz sınıfın tipini ekrana basmalı.
